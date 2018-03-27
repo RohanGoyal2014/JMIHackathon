@@ -9,13 +9,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimaryDark">
+        android:orientation="horizontal">
     <EditText
         android:id="@+id/search_view"
-        android:textColorLink="#FFFFFF"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -31,15 +27,18 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+
         <ProgressBar
             android:id="@+id/progress_bar"
             android:visibility="gone"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_gravity="center"/>
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item" />
     </FrameLayout>
 </LinearLayout>
